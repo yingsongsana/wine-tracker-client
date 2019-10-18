@@ -25,7 +25,44 @@ const onSignUpFailure = function (event) {
   $('#sign-up').trigger('reset')
 }
 
+const onSignInSuccess = function (data) {
+  successMessage('Signed in successfully!')
+  store.user = data.user
+  $('#sign-in').trigger('reset')
+  console.log(store.user)
+}
+
+const onSignInFailure = function (event) {
+  failureMessage('Signed in failed')
+  $('#sign-in').trigger('reset')
+}
+
+// const onChangePasswordSuccess = function (data) {
+//   successMessage('Changed password successfully!')
+//   $('#change-password').trigger('reset')
+// }
+//
+// const onChangePasswordFailure = function (event) {
+//   failureMessage('Changed password failed')
+//   $('#change-password').trigger('reset')
+// }
+//
+// const onSignOutSuccess = function () {
+//   successMessage('Signed out successfully!')
+//   store.user = ''
+//   // console.log(store.user)
+//   $('.game').addClass('hidden')
+//   $('.form').addClass('hidden')
+//   $('.greeting').removeClass('hidden')
+// }
+//
+// const onSignOutFailure = function () {
+//   failureMessage('Sign out failed!')
+// }
+
 module.exports = {
   onSignUpSuccess,
-  onSignUpFailure
+  onSignUpFailure,
+  onSignInSuccess,
+  onSignInFailure
 }

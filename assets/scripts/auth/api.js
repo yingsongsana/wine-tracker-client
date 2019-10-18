@@ -11,13 +11,13 @@ const signUp = function (formData) {
   })
 }
 
-// const signIn = function (formData) {
-//   return $.ajax({
-//     method: 'POST',
-//     url: config.apiUrl + '/sign-in',
-//     data: formData
-//   })
-// }
+const signIn = function (formData) {
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/sign-in',
+    data: formData
+  })
+}
 //
 // const changePassword = function (formData) {
 //   // console.log(store)
@@ -42,8 +42,8 @@ const signUp = function (formData) {
 // }
 
 module.exports = {
-  signUp
-  // signIn,
+  signUp,
+  signIn
   // changePassword,
   // signOut
 }
