@@ -37,16 +37,16 @@ const onSignInFailure = function (event) {
   $('#sign-in').trigger('reset')
 }
 
-// const onChangePasswordSuccess = function (data) {
-//   successMessage('Changed password successfully!')
-//   $('#change-password').trigger('reset')
-// }
-//
-// const onChangePasswordFailure = function (event) {
-//   failureMessage('Changed password failed')
-//   $('#change-password').trigger('reset')
-// }
-//
+const onChangePasswordSuccess = function (data) {
+  successMessage('Changed password successfully!')
+  $('#change-password').trigger('reset')
+}
+
+const onChangePasswordFailure = function (event) {
+  failureMessage('Changed password failed')
+  $('#change-password').trigger('reset')
+}
+
 // const onSignOutSuccess = function () {
 //   successMessage('Signed out successfully!')
 //   store.user = ''
@@ -64,5 +64,7 @@ module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
   onSignInSuccess,
-  onSignInFailure
+  onSignInFailure,
+  onChangePasswordSuccess,
+  onChangePasswordFailure
 }
