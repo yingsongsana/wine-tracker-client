@@ -47,18 +47,15 @@ const onChangePasswordFailure = function (event) {
   $('#change-password').trigger('reset')
 }
 
-// const onSignOutSuccess = function () {
-//   successMessage('Signed out successfully!')
-//   store.user = ''
-//   // console.log(store.user)
-//   $('.game').addClass('hidden')
-//   $('.form').addClass('hidden')
-//   $('.greeting').removeClass('hidden')
-// }
-//
-// const onSignOutFailure = function () {
-//   failureMessage('Sign out failed!')
-// }
+const onSignOutSuccess = function () {
+  successMessage('Signed out successfully!')
+  store.user = ''
+  console.log(store.user)
+}
+
+const onSignOutFailure = function () {
+  failureMessage('Sign out failed!')
+}
 
 module.exports = {
   onSignUpSuccess,
@@ -66,5 +63,7 @@ module.exports = {
   onSignInSuccess,
   onSignInFailure,
   onChangePasswordSuccess,
-  onChangePasswordFailure
+  onChangePasswordFailure,
+  onSignOutSuccess,
+  onSignOutFailure
 }
