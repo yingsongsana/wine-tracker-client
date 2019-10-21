@@ -16,6 +16,17 @@ const newWine = function (formData) {
   })
 }
 
+const indexWine = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/wines',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
-  newWine
+  newWine,
+  indexWine
 }
