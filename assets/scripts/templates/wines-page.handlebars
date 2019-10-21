@@ -1,0 +1,18 @@
+<div class="container">
+   <h2>Wines: </h2>
+   <ul id="wines">
+   {{#each wines as |wine|}}
+     <li>
+       Name: {{wine.name}}
+       <ul>Style: {{wine.style}}</ul>
+       <ul>Variety: {{wine.variety}}</ul>
+       <ul>Producer: {{wine.producer}}</ul>
+       <ul>Country: {{wine.country}}</ul>
+       <ul>Appearance: {{wine.appearance}}</ul>
+       <ul>Aroma: {{wine.aroma}}</ul>
+       <ul>Tasting Notes: {{wine.notes}}</ul>
+       <ul>Memories: {{wine.mem}}</ul>
+     </li>
+   {{/each}}
+   </ul>
+</div>

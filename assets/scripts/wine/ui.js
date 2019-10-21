@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store.js')
+const winesPageTemplate = require('../templates/wines-page.handlebars')
 
 const successMessage = function (newText) {
   $('#wine-message').text(newText)
@@ -31,7 +32,9 @@ const onIndexWineSuccess = function (data) {
   // console.log(data)
   // console.log(store.wine)
   // console.log(store.wine[0].name)
-  successMessage('Wine index retrieved!')
+  const winesPageHtml = winesPageTemplate({ wines: data.wines })
+  $('.wine-cellar').text('')
+  $('.wine-cellar').append(winesPageHtml)
 }
 
 const onIndexWineFailure = function (data) {
@@ -40,13 +43,14 @@ const onIndexWineFailure = function (data) {
 
 const onGetWineSuccess = function (responseData) {
   console.log(responseData)
-  $('.wine-cellar').html('')
+  $('.wine-cellar').text('')
   const wineText = (`
     <h4>Name: ${responseData.wine.name}</h4>
     <p>Producer: ${responseData.wine.producer}</p>
     <br>
     `)
-  $('.wine-cellar').html(wineText)
+  $('.wine-cellar').append(wineText)
+  $('#wine-id').trigger('reset')
 }
 
 const onGetWineFailure = function () {
