@@ -14,4 +14,5 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#wine-entry').on('submit', wineEvents.onNewWine)
+  $('#wine-index').on('click', wineEvents.onIndexWine)
 })
