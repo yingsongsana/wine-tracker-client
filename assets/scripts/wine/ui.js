@@ -18,6 +18,7 @@ const onNewWineSuccess = function (data) {
   store.wine = data.wine
   console.log(store.wine)
   $('#wine-entry').trigger('reset')
+  $('#wineModal').modal('toggle')
 }
 
 const onNewWineFailure = function (event) {

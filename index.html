@@ -41,9 +41,50 @@
         <button id="sign-out">Sign Out</button>
       </div>
 
+      <section>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#wineModal">Create New Wine</button>
+      <div id="wineModal"class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">New Wine Entry</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="wine-entry">
+                <label class="col-form-label">Name:</label>
+                <input class="form-control" type="text" name="wine[name]"/>
+                <label for="wine-country" class="col-form-label">Country:</label>
+                <input class="form-control" type="text" name="wine[country]"/>
+                <label class="col-form-label">Style:</label>
+                <input class="form-control" type="text" name="wine[style]"/>
+                <label class="col-form-label">Country:</label>
+                <input class="form-control" type="text" name="wine[variety]"/>
+                <label class="col-form-label">Producer:</label>
+                <input class="form-control" type="text" name="wine[producer]"/>
+                <label class="col-form-label">Appearance:</label>
+                <textarea class="form-control" rows="3" name="wine[appearance]"></textarea>
+                <label class="col-form-label">Aroma:</label>
+                <textarea class="form-control" rows="3" name="wine[aroma]"></textarea>
+                <label class="col-form-label">Tasting Notes:</label>
+                <textarea class="form-control" name="wine[tasting_notes]"></textarea>
+                <label class="col-form-label">Memories:</label>
+                <textarea class="form-control" name="wine[memories]"></textarea>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" form="wine-entry" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Discard</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div>
         <h2 id="wine-message"></h2>
-        <form id="wine-entry">
+        <!-- <form id="wine-entry">
           <input type="text" name="wine[name]" placeholder="name"/>
           <input type="text" name="wine[country]" placeholder="country"/>
           <input type="text" name="wine[style]" placeholder="style"/>
@@ -54,8 +95,9 @@
           <textarea name="wine[tasting_notes]" placeholder="tasting notes"></textarea>
           <textarea name="wine[memories]" placeholder="memories"></textarea>
           <button>Submit</button>
-        </form>
+        </form> -->
       </div>
+    </section>
 
       <div>
         <button id="wine-index">See All Wines</button>
