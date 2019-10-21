@@ -26,7 +26,19 @@ const indexWine = function () {
   })
 }
 
+// get one wine by id
+const getWine = function (formData) {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/wines/' + formData.wine.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   newWine,
-  indexWine
+  indexWine,
+  getWine
 }

@@ -57,8 +57,15 @@
         </form>
       </div>
 
-      <div class="wine-index">
+      <div>
         <button id="wine-index">See All Wines</button>
+        <!-- Or a drop down list of wines to pick from, doesn't have to be button -->
+        <form id="wine-id">
+          <input required type="number" min="0" name="wine[id]">
+          <button type="submit">Get Wine!</button>
+        </form>
       </div>
-    </body>
+      <section>
+      <div class="wine-cellar"></div>
+    </section>
 </html>

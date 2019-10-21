@@ -20,10 +20,21 @@ const onIndexWine = function (event) {
 
   api.indexWine()
     .then(ui.onIndexWineSuccess)
-    // .catch(ui.onIndexWineFailure)
+    .catch(ui.onIndexWineFailure)
+}
+
+const onGetWine = function (event) {
+  event.preventDefault()
+
+  const formData = getFormFields(event.target)
+  console.log(formData)
+  api.getWine(formData)
+    .then(ui.onGetWineSuccess)
+    .catch(ui.onGetWineFailure)
 }
 
 module.exports = {
   onNewWine,
-  onIndexWine
+  onIndexWine,
+  onGetWine
 }

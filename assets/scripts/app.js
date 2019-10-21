@@ -15,4 +15,5 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#wine-entry').on('submit', wineEvents.onNewWine)
   $('#wine-index').on('click', wineEvents.onIndexWine)
+  $('#wine-id').on('submit', wineEvents.onGetWine)
 })
