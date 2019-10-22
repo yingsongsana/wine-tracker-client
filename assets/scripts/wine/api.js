@@ -48,9 +48,20 @@ const updateWine = function (formData) {
   })
 }
 
+const deleteWine = function (formData) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/wines/' + formData.wine.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   newWine,
   indexWine,
   getWine,
-  updateWine
+  updateWine,
+  deleteWine
 }

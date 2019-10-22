@@ -43,9 +43,21 @@ const onUpdateWine = function (event) {
     .catch(ui.onUpdateWineFailure)
 }
 
+const onDeleteWine = function (event) {
+  console.log(event.target)
+  event.preventDefault()
+
+  const form = event.target
+  const formData = getFormFields(form)
+  api.deleteWine(formData)
+    .then(ui.onDeleteWineSuccess)
+    .catch(ui.onDeleteWineFailure)
+}
+
 module.exports = {
   onNewWine,
   onIndexWine,
   onGetWine,
-  onUpdateWine
+  onUpdateWine,
+  onDeleteWine
 }

@@ -17,4 +17,5 @@ $(() => {
   $('#wine-index').on('click', wineEvents.onIndexWine)
   $('#wine-id').on('submit', wineEvents.onGetWine)
   $('#wine-update').on('submit', wineEvents.onUpdateWine)
+  $('#wine-delete').on('submit', wineEvents.onDeleteWine)
 })

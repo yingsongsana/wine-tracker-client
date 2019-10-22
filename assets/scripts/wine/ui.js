@@ -84,6 +84,18 @@ const onUpdateWineFailure = function () {
   failureMessage('Update failed')
 }
 
+const onDeleteWineSuccess = function (responseData) {
+  successMessage('Your bottle will be missed! Time to restock!')
+  $('#wine-delete').trigger('reset')
+  $('#wineDeleteModal').modal('toggle')
+}
+
+const onDeleteWineFailure = function () {
+  failureMessage("You sure it's corked? Try again.")
+  $('#wine-delete').trigger('reset')
+  $('#wineDeleteModal').modal('toggle')
+}
+
 module.exports = {
   onNewWineSuccess,
   onNewWineFailure,
@@ -92,5 +104,7 @@ module.exports = {
   onGetWineSuccess,
   onGetWineFailure,
   onUpdateWineSuccess,
-  onUpdateWineFailure
+  onUpdateWineFailure,
+  onDeleteWineSuccess,
+  onDeleteWineFailure
 }
