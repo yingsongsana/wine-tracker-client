@@ -33,8 +33,19 @@ const onGetWine = function (event) {
     .catch(ui.onGetWineFailure)
 }
 
+const onUpdateWine = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const formData = getFormFields(form)
+  api.updateWine(formData)
+    .then(ui.onUpdateWineSuccess)
+    .catch(ui.onUpdateWineFailure)
+}
+
 module.exports = {
   onNewWine,
   onIndexWine,
-  onGetWine
+  onGetWine,
+  onUpdateWine
 }

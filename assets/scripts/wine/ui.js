@@ -32,6 +32,7 @@ const onIndexWineSuccess = function (data) {
   // console.log(data)
   // console.log(store.wine)
   // console.log(store.wine[0].name)
+  successMessage('Here are all your bottles!')
   const winesPageHtml = winesPageTemplate({ wines: data.wines })
   $('.wine-cellar').text('')
   $('.wine-cellar').append(winesPageHtml)
@@ -39,6 +40,7 @@ const onIndexWineSuccess = function (data) {
 
 const onIndexWineFailure = function (data) {
   failureMessage('Wine index unable to retrieve')
+  $('.wine-cellar').text('')
 }
 
 const onGetWineSuccess = function (responseData) {
@@ -59,10 +61,22 @@ const onGetWineSuccess = function (responseData) {
     `)
   $('.wine-cellar').append(wineText)
   $('#wine-id').trigger('reset')
+  successMessage('Found your bottle!')
 }
 
 const onGetWineFailure = function () {
-  failureMessage('Uable to find your bottle!')
+  failureMessage('Unable to find your bottle!')
+  $('.wine-cellar').text('')
+}
+
+const onUpdateWineSuccess = function () {
+  successMessage('Updated successfully!')
+  $('#wine-update').trigger('reset')
+  $('#wineUpdateModal').modal('toggle')
+}
+
+const onUpdateWineFailure = function () {
+  failureMessage('Update failed')
 }
 
 module.exports = {
@@ -71,5 +85,7 @@ module.exports = {
   onIndexWineSuccess,
   onIndexWineFailure,
   onGetWineSuccess,
-  onGetWineFailure
+  onGetWineFailure,
+  onUpdateWineSuccess,
+  onUpdateWineFailure
 }

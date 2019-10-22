@@ -37,8 +37,20 @@ const getWine = function (formData) {
   })
 }
 
+const updateWine = function (formData) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/wines/' + formData.wine.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: formData
+  })
+}
+
 module.exports = {
   newWine,
   indexWine,
-  getWine
+  getWine,
+  updateWine
 }
