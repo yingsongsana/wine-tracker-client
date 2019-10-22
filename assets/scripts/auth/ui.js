@@ -17,7 +17,6 @@ const onSignUpSuccess = function (data) {
   successMessage('Signed up successfully!')
   store.user = data.user
   // console.log(store.user)
-  $('#sign-up').trigger('reset')
 }
 
 const onSignUpFailure = function (event) {
@@ -29,7 +28,11 @@ const onSignInSuccess = function (data) {
   successMessage('Signed in successfully!')
   store.user = data.user
   $('#sign-in').trigger('reset')
-  console.log(store.user)
+  // console.log(store.user)
+  $('#sign-up').trigger('reset')
+  $('.greeting').hide()
+  $('.auth-items').show()
+  $('.cellar').show()
 }
 
 const onSignInFailure = function (event) {
@@ -49,6 +52,9 @@ const onChangePasswordFailure = function (event) {
 
 const onSignOutSuccess = function () {
   successMessage('Signed out successfully!')
+  $('.auth-items').hide()
+  $('.cellar').hide()
+  $('.greeting').show()
 }
 
 const onSignOutFailure = function () {

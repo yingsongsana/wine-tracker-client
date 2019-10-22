@@ -13,8 +13,8 @@
     </head>
     <body>
       <h1>Wine Journal</h1>
-      <div>
-        <h2 id="message"></h2>
+      <h2 id="message"></h2>
+      <div class="greeting">
         <h2>Sign Up</h2>
         <form id="sign-up">
         <input type="email" name="credentials[email]" placeholder="Enter email"/>
@@ -29,7 +29,9 @@
         <input type="password" name="credentials[password]" placeholder="Enter password"/>
         <button>Sign In</button>
         </form>
+      </div>
 
+      <div class="auth-items">
         <h2>Change Password</h2>
         <form id="change-password">
         <input type="password" name="passwords[old]" placeholder="Enter old password"/>
@@ -41,7 +43,7 @@
         <button id="sign-out">Sign Out</button>
       </div>
 
-      <section>
+      <section class="cellar">
         <div>
           <h2 id="wine-message"></h2>
         </div>
@@ -174,8 +176,7 @@
           <button type="submit">Get Wine!</button>
         </form>
       </div>
-      </section>
-      <section>
       <div class="wine-cellar"></div>
-    </section>
+      </section>
+    </body>
 </html>
