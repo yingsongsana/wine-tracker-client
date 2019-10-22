@@ -17,6 +17,7 @@ const onSignUpSuccess = function (data) {
   successMessage('Signed up successfully!')
   store.user = data.user
   // console.log(store.user)
+  $('#sign-up').trigger('reset')
 }
 
 const onSignUpFailure = function (event) {
@@ -29,7 +30,10 @@ const onSignInSuccess = function (data) {
   store.user = data.user
   $('#sign-in').trigger('reset')
   // console.log(store.user)
-  $('#sign-up').trigger('reset')
+  $('body').css('background-image', "url('/images/background.jpg')")
+  $('body').css('background-repeat', 'repeat')
+  $('body').css('background-size', 'auto')
+  // $('body').css('background-color', '#f2b997')
   $('.greeting').hide()
   $('.auth-items').show()
   $('.cellar').show()
@@ -55,6 +59,8 @@ const onSignOutSuccess = function () {
   $('.auth-items').hide()
   $('.cellar').hide()
   $('.greeting').show()
+  $('body').css('background-image', "url('/images/grapes_maja_petric.jpg')")
+  $('body').css('background-size', 'cover')
 }
 
 const onSignOutFailure = function () {

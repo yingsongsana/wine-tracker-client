@@ -18,6 +18,7 @@ const displayWine = function (responseData) {
   $('.wine-cellar').text('')
   const wineText = (`
     <h4>Name: ${responseData.wine.name}</h4>
+    <ul>ID: ${responseData.wine.id}</ul>
     <ul>Producer: ${responseData.wine.producer}</ul>
     <ul>Style: ${responseData.wine.style}</ul>
     <ul>Variety: ${responseData.wine.variety}</ul>
@@ -38,6 +39,7 @@ const onNewWineSuccess = function (data) {
   console.log(store.wine)
   $('#wine-entry').trigger('reset')
   $('#wineModal').modal('toggle')
+  displayWine(data)
 }
 
 const onNewWineFailure = function (event) {
