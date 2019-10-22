@@ -49,8 +49,6 @@ const onChangePasswordFailure = function (event) {
 
 const onSignOutSuccess = function () {
   successMessage('Signed out successfully!')
-  store.user = ''
-  console.log(store.user)
 }
 
 const onSignOutFailure = function () {

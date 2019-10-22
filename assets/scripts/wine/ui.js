@@ -42,7 +42,7 @@ const onNewWineSuccess = function (data) {
 
 const onNewWineFailure = function (event) {
   failureMessage('New entry creation failed')
-  $('#wine-entry').trigger('reset')
+  $('#wineModal').modal('toggle')
 }
 
 const onIndexWineSuccess = function (data) {
@@ -82,6 +82,7 @@ const onUpdateWineSuccess = function (responseData) {
 
 const onUpdateWineFailure = function () {
   failureMessage('Update failed')
+  $('#wineUpdateModal').modal('toggle')
 }
 
 const onDeleteWineSuccess = function (responseData) {
@@ -92,7 +93,6 @@ const onDeleteWineSuccess = function (responseData) {
 
 const onDeleteWineFailure = function () {
   failureMessage("You sure it's corked? Try again.")
-  $('#wine-delete').trigger('reset')
   $('#wineDeleteModal').modal('toggle')
 }
 
