@@ -36,7 +36,7 @@ const displayWine = function (responseData) {
 const onNewWineSuccess = function (data) {
   successMessage('New entry created successfully!')
   store.wine = data.wine
-  console.log(store.wine)
+  // console.log(store.wine)
   $('#wine-entry').trigger('reset')
   $('#wineModal').modal('toggle')
   displayWine(data)
@@ -64,7 +64,7 @@ const onIndexWineFailure = function (data) {
 }
 
 const onGetWineSuccess = function (responseData) {
-  console.log(responseData)
+  // console.log(responseData)
   displayWine(responseData)
   $('#wine-id').trigger('reset')
   successMessage('Found your bottle!')

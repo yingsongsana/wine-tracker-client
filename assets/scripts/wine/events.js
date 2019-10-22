@@ -27,7 +27,7 @@ const onGetWine = function (event) {
   event.preventDefault()
 
   const formData = getFormFields(event.target)
-  console.log(formData)
+  // console.log(formData)
   api.getWine(formData)
     .then(ui.onGetWineSuccess)
     .catch(ui.onGetWineFailure)
@@ -44,7 +44,7 @@ const onUpdateWine = function (event) {
 }
 
 const onDeleteWine = function (event) {
-  console.log(event.target)
+  // console.log(event.target)
   event.preventDefault()
 
   const form = event.target
