@@ -46,7 +46,15 @@ const onGetWineSuccess = function (responseData) {
   $('.wine-cellar').text('')
   const wineText = (`
     <h4>Name: ${responseData.wine.name}</h4>
-    <p>Producer: ${responseData.wine.producer}</p>
+    <ul>Producer: ${responseData.wine.producer}</ul>
+    <ul>Style: ${responseData.wine.style}</ul>
+    <ul>Variety: ${responseData.wine.variety}</ul>
+    <ul>Producer: ${responseData.wine.producer}</ul>
+    <ul>Country: ${responseData.wine.country}</ul>
+    <ul>Appearance: ${responseData.wine.appearance}</ul>
+    <ul>Aroma: ${responseData.wine.aroma}</ul>
+    <ul>Tasting Notes: ${responseData.wine.notes}</ul>
+    <ul>Memories: ${responseData.wine.mem}</ul>
     <br>
     `)
   $('.wine-cellar').append(wineText)
