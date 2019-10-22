@@ -14,6 +14,24 @@ const failureMessage = function (newText) {
   $('#wine-message').addClass('failure')
 }
 
+const displayWine = function (responseData) {
+  $('.wine-cellar').text('')
+  const wineText = (`
+    <h4>Name: ${responseData.wine.name}</h4>
+    <ul>Producer: ${responseData.wine.producer}</ul>
+    <ul>Style: ${responseData.wine.style}</ul>
+    <ul>Variety: ${responseData.wine.variety}</ul>
+    <ul>Producer: ${responseData.wine.producer}</ul>
+    <ul>Country: ${responseData.wine.country}</ul>
+    <ul>Appearance: ${responseData.wine.appearance}</ul>
+    <ul>Aroma: ${responseData.wine.aroma}</ul>
+    <ul>Tasting Notes: ${responseData.wine.notes}</ul>
+    <ul>Memories: ${responseData.wine.mem}</ul>
+    <br>
+  `)
+  $('.wine-cellar').append(wineText)
+}
+
 const onNewWineSuccess = function (data) {
   successMessage('New entry created successfully!')
   store.wine = data.wine
@@ -45,21 +63,7 @@ const onIndexWineFailure = function (data) {
 
 const onGetWineSuccess = function (responseData) {
   console.log(responseData)
-  $('.wine-cellar').text('')
-  const wineText = (`
-    <h4>Name: ${responseData.wine.name}</h4>
-    <ul>Producer: ${responseData.wine.producer}</ul>
-    <ul>Style: ${responseData.wine.style}</ul>
-    <ul>Variety: ${responseData.wine.variety}</ul>
-    <ul>Producer: ${responseData.wine.producer}</ul>
-    <ul>Country: ${responseData.wine.country}</ul>
-    <ul>Appearance: ${responseData.wine.appearance}</ul>
-    <ul>Aroma: ${responseData.wine.aroma}</ul>
-    <ul>Tasting Notes: ${responseData.wine.notes}</ul>
-    <ul>Memories: ${responseData.wine.mem}</ul>
-    <br>
-    `)
-  $('.wine-cellar').append(wineText)
+  displayWine(responseData)
   $('#wine-id').trigger('reset')
   successMessage('Found your bottle!')
 }
@@ -69,10 +73,11 @@ const onGetWineFailure = function () {
   $('.wine-cellar').text('')
 }
 
-const onUpdateWineSuccess = function () {
+const onUpdateWineSuccess = function (responseData) {
   successMessage('Updated successfully!')
   $('#wine-update').trigger('reset')
   $('#wineUpdateModal').modal('toggle')
+  displayWine(responseData)
 }
 
 const onUpdateWineFailure = function () {
