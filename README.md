@@ -9,6 +9,7 @@ their choosing. All the entries are stored using the corresponding API built on 
 
 
 [Link to deployed client] (https://yingsongsana.github.io/wine-tracker-client/)
+[Link to deployed back-end] (https://whispering-oasis-16021.herokuapp.com/)
 [Link to back-end repository] (https://github.com/yingsongsana/project_2_api)
 
 
