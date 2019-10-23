@@ -7,7 +7,10 @@ user is able to create new journal entries for each wine they'd like to have a r
 Aside from creating, they are also able to update, delete, and view each entry of
 their choosing. All the entries are stored using the corresponding API built on Rails.
 
+
+[Link to deployed client] (https://yingsongsana.github.io/wine-tracker-client/)
 [Link to back-end repository] (https://github.com/yingsongsana/project_2_api)
+
 
 ### Process and planning
 
