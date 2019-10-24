@@ -8,9 +8,9 @@ Aside from creating, they are also able to update, delete, and view each entry o
 their choosing. All the entries are stored using the corresponding API built on Rails.
 
 
-[Link to deployed client] (https://yingsongsana.github.io/wine-tracker-client/)
-[Link to deployed back-end] (https://whispering-oasis-16021.herokuapp.com/)
-[Link to back-end repository] (https://github.com/yingsongsana/project_2_api)
+[Link to deployed client](https://yingsongsana.github.io/wine-tracker-client/)
+[Link to deployed back-end](https://whispering-oasis-16021.herokuapp.com/)
+[Link to back-end repository](https://github.com/yingsongsana/project_2_api)
 
 
 ### Process and planning
@@ -29,4 +29,4 @@ how to better communicate my problems.
 ..* Better and more semantically-minded html elements.
 ..* User success/fail messages should disappear after an amount of time.
 
-[Look at my original wireframes and user stories here] (https://git.generalassemb.ly/ga-wdi-boston/full-stack-project/issues/2837)
+[Look at my original wireframes and user stories here](https://git.generalassemb.ly/ga-wdi-boston/full-stack-project/issues/2837)

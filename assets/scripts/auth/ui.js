@@ -58,8 +58,8 @@ const onSignOutSuccess = function () {
   $('.auth-items').hide()
   $('.cellar').hide()
   $('.greeting').show()
-  $('body').css('background-image', "url('public/images/grapes_maja_petric.jpg')")
-  $('body').css('background-size', 'cover')
+  // $('body').css('background-image', "url('public/images/grapes_maja_petric.jpg')")
+  // $('body').css('background-size', 'cover')
 }
 
 const onSignOutFailure = function () {
