@@ -6,10 +6,20 @@ $primary-color: #F3F3F3;
 $wine-color: #6b1e2d;
 
 body {
-  background-image: url('public/images/grapes_maja_petric.jpg');
+  background-attachment: fixed;
+  background-image: url('./public/images/grapes_maja_petric.jpg');
   background-size: cover;
   color: $wine-color;
   height: 100%;
+  .container {
+    background-color: pink;
+    border: 3px solid black;
+    height: 600px;
+    // overflow-x: hidden;
+    // overflow-y: auto;
+    overflow: auto;
+    width: 500px;
+  }
 }
 
 // Would love to get below to work for background image opacity
@@ -78,6 +88,15 @@ body {
     margin: 3px;
   }
 }
+
+// .container {
+//   background-color: white;
+//   border: 3px solid black;
+//   height: 800px;
+//   overflow-x: hidden;
+//   overflow-y: auto;
+//   width: 500px;
+// }
 
 .success {
   color: $success;
