@@ -29,20 +29,40 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  .container {
-    background-color: pink;
-    border: 3px solid black;
-    height: 600px;
-    // overflow-x: hidden;
-    // overflow-y: auto;
-    // overflow: auto;
-    width: 500px;
-  }
 }
 
 .cellar {
-  margin: 200px;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  float: left;
+  .btn {
+    margin: .5rem;
+  }
 }
+
+.wine-cellar {
+  display: flex;
+}
+
+.container {
+  background-color: pink;
+  border: 3px solid black;
+  height: 70vh;
+  // overflow-x: hidden;
+  // overflow-y: auto;
+  // overflow: auto;
+  width: 50vw;
+  .carousel-control-prev {
+    position: relative;
+  }
+  .carousel-control-next {
+    bottom: auto;
+    postion: absolute;
+    top: auto;
+  }
+}
+
+
 
 // Would love to get below to work for background image opacity
 // without turning all elements opaque

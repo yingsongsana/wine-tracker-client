@@ -34,6 +34,7 @@ const displayWine = function (responseData) {
 }
 
 const onNewWineSuccess = function (data) {
+  $('#message').hide()
   successMessage('New entry created successfully!')
   store.wine = data.wine
   // console.log(store.wine)
@@ -43,6 +44,7 @@ const onNewWineSuccess = function (data) {
 }
 
 const onNewWineFailure = function (event) {
+  $('#message').hide()
   failureMessage('New entry creation failed')
   $('#wineModal').modal('toggle')
 }
@@ -52,6 +54,7 @@ const onIndexWineSuccess = function (data) {
   // console.log(data)
   // console.log(store.wine)
   // console.log(store.wine[0].name)
+  $('#message').hide()
   successMessage('Here are all your bottles!')
   const winesPageHtml = winesPageTemplate({ wines: data.wines })
   $('.wine-cellar').text('')
@@ -59,6 +62,7 @@ const onIndexWineSuccess = function (data) {
 }
 
 const onIndexWineFailure = function (data) {
+  $('#message').hide()
   failureMessage('Wine index unable to retrieve')
   $('.wine-cellar').text('')
 }
@@ -67,15 +71,18 @@ const onGetWineSuccess = function (responseData) {
   // console.log(responseData)
   displayWine(responseData)
   $('#wine-id').trigger('reset')
+  $('#message').hide()
   successMessage('Found your bottle!')
 }
 
 const onGetWineFailure = function () {
+  $('#message').hide()
   failureMessage('Unable to find your bottle!')
   $('.wine-cellar').text('')
 }
 
 const onUpdateWineSuccess = function (responseData) {
+  $('#message').hide()
   successMessage('Updated successfully!')
   $('#wine-update').trigger('reset')
   $('#wineUpdateModal').modal('toggle')
@@ -83,17 +90,20 @@ const onUpdateWineSuccess = function (responseData) {
 }
 
 const onUpdateWineFailure = function () {
+  $('#message').hide()
   failureMessage('Update failed')
   $('#wineUpdateModal').modal('toggle')
 }
 
 const onDeleteWineSuccess = function (responseData) {
+  $('#message').hide()
   successMessage('Your bottle will be missed! Time to restock!')
   $('#wine-delete').trigger('reset')
   $('#wineDeleteModal').modal('toggle')
 }
 
 const onDeleteWineFailure = function () {
+  $('#message').hide()
   failureMessage("You sure it's corked? Try again.")
   $('#wineDeleteModal').modal('toggle')
 }

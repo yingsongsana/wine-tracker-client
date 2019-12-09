@@ -54,11 +54,11 @@
     <h2 id="message"></h2>
 
 
-      <section>
-        <div class="cellar">
+
         <div>
-          <h2 id="wine-message"></h2>
+          <h2 class="wine-message" id="wine-message"></h2>
         </div>
+      <div class="cellar">
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#wineModal">Create New Wine</button>
       <div id="wineModal"class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -180,16 +180,14 @@
         <h2 id="wine-message"></h2>
       </div>
 
-      <div>
         <button class="btn btn-info" id="wine-index">See All Wines</button>
         <!-- Or a drop down list of wines to pick from, doesn't have to be button -->
         <form id="wine-id">
           <input required type="number" min"0" name="wine[id]"/>
           <button class="btn btn-info" type="submit">Get Wine!</button>
         </form>
-      </div>
+</div>
+
       <div class="wine-cellar"></div>
-    </div>
-      </section>
     </body>
 </html>
