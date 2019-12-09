@@ -29,6 +29,19 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  .container {
+    background-color: pink;
+    border: 3px solid black;
+    height: 600px;
+    // overflow-x: hidden;
+    // overflow-y: auto;
+    // overflow: auto;
+    width: 500px;
+  }
+}
+
+.cellar {
+  margin: 200px;
 }
 
 // Would love to get below to work for background image opacity
