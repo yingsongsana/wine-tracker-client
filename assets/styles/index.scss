@@ -141,3 +141,50 @@ body {
 .failure {
   color: $failure;
 }
+
+@media (max-width: 425px) {
+
+  .greeting {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 50px;
+  }
+
+  nav form {
+    margin-bottom: .5rem;
+  }
+
+  .cellar {
+    margin-left: 30%;
+  }
+
+  .container {
+    display: block;
+    float: none;
+    margin: 5%;
+    width: 90%;
+  }
+
+  .containerSingle {
+    display: block;
+    float: none;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 320px) {
+  .greeting {
+    // margin-left: 5%;
+    // margin-right: 5%;
+    // padding: 50px;
+    padding-left: .5rem;
+  }
+
+  // .containerSingle {
+  //   display: block;
+  //   float: none;
+  //   width: 90%;
+  // }
+}
