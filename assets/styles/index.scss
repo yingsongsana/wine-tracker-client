@@ -5,23 +5,6 @@ $theme-color: #E0E0E0;
 $primary-color: #F3F3F3;
 $wine-color: #6b1e2d;
 
-// body {
-//   background-attachment: fixed;
-//   background-image: url('./public/images/grapes_maja_petric.jpg');
-//   background-size: cover;
-//   color: $wine-color;
-//   height: 100%;
-//   .container {
-//     background-color: pink;
-//     border: 3px solid black;
-//     height: 600px;
-//     // overflow-x: hidden;
-//     // overflow-y: auto;
-//     overflow: auto;
-//     width: 500px;
-//   }
-// }
-
 body {
   background: url('./public/images/grapes_maja_petric.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -49,19 +32,35 @@ body {
   }
 }
 
-.wine-cellar {
-  display: flex;
-}
-
 .container {
-  background-color: white;
+  background-color: $wine-color;
   border: 3px solid black;
+  color: #ffffff;
+  font-weight: bolder;
   height: 70vh;
+  opacity: .8;
   overflow-x: hidden;
   overflow-y: auto;
   overflow: auto;
   width: 50vw;
   h2 {
+    text-align: center;
+  }
+}
+
+.containerSingle {
+  background-color: $wine-color;
+  border: 3px solid black;
+  color: #ffffff;
+  font-weight: bolder;
+  height: 70vh;
+  margin-left: 35%;
+  opacity: .8;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow: auto;
+  width: 50vw;
+  h3 {
     text-align: center;
   }
 }
@@ -134,15 +133,6 @@ body {
     margin: 3px;
   }
 }
-
-// .container {
-//   background-color: white;
-//   border: 3px solid black;
-//   height: 800px;
-//   overflow-x: hidden;
-//   overflow-y: auto;
-//   width: 500px;
-// }
 
 .success {
   color: $success;

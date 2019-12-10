@@ -17,7 +17,8 @@ const failureMessage = function (newText) {
 const displayWine = function (responseData) {
   $('.wine-cellar').text('')
   const wineText = (`
-    <h4>Name: ${responseData.wine.name}</h4>
+    <div class="containerSingle">
+    <h3>${responseData.wine.name}</h3>
     <ul>ID: ${responseData.wine.id}</ul>
     <ul>Producer: ${responseData.wine.producer}</ul>
     <ul>Style: ${responseData.wine.style}</ul>
@@ -28,7 +29,7 @@ const displayWine = function (responseData) {
     <ul>Aroma: ${responseData.wine.aroma}</ul>
     <ul>Tasting Notes: ${responseData.wine.notes}</ul>
     <ul>Memories: ${responseData.wine.mem}</ul>
-    <br>
+    </div>
   `)
   $('.wine-cellar').append(wineText)
 }
@@ -58,7 +59,7 @@ const onIndexWineSuccess = function (data) {
   $('#message').hide()
   successMessage('Here are all your bottles!')
   const winesPageHtml = winesPageTemplate({ wines: data.wines })
-  $('wine-cellar').show()
+  $('.wine-cellar').show()
   $('.wine-cellar').text('')
   $('.wine-cellar').append(winesPageHtml)
 }
@@ -71,6 +72,7 @@ const onIndexWineFailure = function (data) {
 
 const onGetWineSuccess = function (responseData) {
   // console.log(responseData)
+  $('.container').hide()
   displayWine(responseData)
   $('#wine-id').trigger('reset')
   $('#message').hide()

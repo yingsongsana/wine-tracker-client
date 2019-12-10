@@ -1,61 +1,8 @@
-<!-- <div class="container">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1++"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-
-      <ul id="wines">
-      {{#each wines as |wine|}}
-      {{#if @first}}
-      <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    </ol>
-          <div class="carousel-item active">
-            {{else}}
-            <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          </ol>
-            <div class="carousel-item">
-              {{/if}}
-        <li>
-          Name: {{wine.name}}
-          <ul>ID: {{wine.id}}</ul>
-          <ul>Style: {{wine.style}}</ul>
-          <ul>Variety: {{wine.variety}}</ul>
-          <ul>Producer: {{wine.producer}}</ul>
-          <ul>Country: {{wine.country}}</ul>
-          <ul>Appearance: {{wine.appearance}}</ul>
-          <ul>Aroma: {{wine.aroma}}</ul>
-          <ul>Tasting Notes: {{wine.notes}}</ul>
-          <ul>Memories: {{wine.mem}}</ul>
-        </li>
-      </div>
-      {{/each}}
-      </ul>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</div> -->
 <div class="container">
    <h2>All Wines</h2>
    <ul id="wines">
    {{#each wines as |wine|}}
-     <li>
-       Name: {{wine.name}}
+       <h3>{{wine.name}}</h3>
        <ul>ID: {{wine.id}}</ul>
        <ul>Style: {{wine.style}}</ul>
        <ul>Variety: {{wine.variety}}</ul>
@@ -65,7 +12,6 @@
        <ul>Aroma: {{wine.aroma}}</ul>
        <ul>Tasting Notes: {{wine.notes}}</ul>
        <ul>Memories: {{wine.mem}}</ul>
-     </li>
    {{/each}}
    </ul>
  </div>
