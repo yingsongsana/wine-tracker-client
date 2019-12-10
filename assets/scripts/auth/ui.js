@@ -14,18 +14,22 @@ const failureMessage = function (newText) {
 }
 
 const onSignUpSuccess = function (data) {
+  $('#message').show()
   successMessage('Signed up successfully!')
   store.user = data.user
   // console.log(store.user)
   $('#sign-up').trigger('reset')
+  $('.wine-cellar').show()
 }
 
 const onSignUpFailure = function (event) {
+  $('#message').show()
   failureMessage('Signed up failed')
   $('#sign-up').trigger('reset')
 }
 
 const onSignInSuccess = function (data) {
+  $('#message').show()
   successMessage('Signed in successfully!')
   store.user = data.user
   $('#sign-in').trigger('reset')
@@ -39,24 +43,32 @@ const onSignInSuccess = function (data) {
 }
 
 const onSignInFailure = function (event) {
+  $('#message').show()
   failureMessage('Signed in failed')
   $('#sign-in').trigger('reset')
 }
 
 const onChangePasswordSuccess = function (data) {
+  $('#message').show()
+  $('#wine-message').hide()
   successMessage('Changed password successfully!')
   $('#change-password').trigger('reset')
 }
 
 const onChangePasswordFailure = function (event) {
+  $('#message').show()
+  $('#wine-message').hide()
   failureMessage('Changed password failed')
   $('#change-password').trigger('reset')
 }
 
 const onSignOutSuccess = function () {
+  $('#message').show()
+  $('#wine-message').hide()
   successMessage('Signed out successfully!')
   $('.auth-items').hide()
   $('.cellar').hide()
+  $('.wine-cellar').hide()
   $('.greeting').show()
   // $('body').css('background-image', "url('public/images/grapes_maja_petric.jpg')")
   // $('body').css('background-size', 'cover')

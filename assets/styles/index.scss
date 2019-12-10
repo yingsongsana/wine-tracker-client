@@ -6,11 +6,66 @@ $primary-color: #F3F3F3;
 $wine-color: #6b1e2d;
 
 body {
-  background-image: url('/public/images/grapes_maja_petric.jpg');
+  background: url('./public/images/grapes_maja_petric.jpg') no-repeat center center fixed;
   background-size: cover;
   color: $wine-color;
-  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
+
+.cellar {
+  margin-left: 1rem;
+  margin-top: 2rem;
+  float: left;
+  .main {
+    margin: .5rem;
+    min-width: -webkit-fill-available;
+  }
+  .wine-id {
+    display: grid;
+    input {
+      border-radius: 5px;
+      margin: auto;
+      max-width: 8rem;
+    }
+  }
+}
+
+.container {
+  background-color: $wine-color;
+  border: 3px solid black;
+  color: #ffffff;
+  font-weight: bolder;
+  height: 70vh;
+  opacity: .8;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow: auto;
+  width: 50vw;
+  h2 {
+    text-align: center;
+  }
+}
+
+.containerSingle {
+  background-color: $wine-color;
+  border: 3px solid black;
+  color: #ffffff;
+  font-weight: bolder;
+  height: 70vh;
+  margin-left: 35%;
+  opacity: .8;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow: auto;
+  width: 50vw;
+  h3 {
+    text-align: center;
+  }
+}
+
+
 
 // Would love to get below to work for background image opacity
 // without turning all elements opaque
@@ -85,4 +140,51 @@ body {
 
 .failure {
   color: $failure;
+}
+
+@media (max-width: 425px) {
+
+  .greeting {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 50px;
+  }
+
+  nav form {
+    margin-bottom: .5rem;
+  }
+
+  .cellar {
+    margin-left: 30%;
+  }
+
+  .container {
+    display: block;
+    float: none;
+    margin: 5%;
+    width: 90%;
+  }
+
+  .containerSingle {
+    display: block;
+    float: none;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 320px) {
+  .greeting {
+    // margin-left: 5%;
+    // margin-right: 5%;
+    // padding: 50px;
+    padding-left: .5rem;
+  }
+
+  // .containerSingle {
+  //   display: block;
+  //   float: none;
+  //   width: 90%;
+  // }
 }
