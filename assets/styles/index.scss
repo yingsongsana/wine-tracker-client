@@ -35,8 +35,17 @@ body {
   margin-left: 1rem;
   margin-top: 2rem;
   float: left;
-  .btn {
+  .main {
     margin: .5rem;
+    min-width: -webkit-fill-available;
+  }
+  .wine-id {
+    display: grid;
+    input {
+      border-radius: 5px;
+      margin: auto;
+      max-width: 8rem;
+    }
   }
 }
 
@@ -45,20 +54,15 @@ body {
 }
 
 .container {
-  background-color: pink;
+  background-color: white;
   border: 3px solid black;
   height: 70vh;
-  // overflow-x: hidden;
-  // overflow-y: auto;
-  // overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow: auto;
   width: 50vw;
-  .carousel-control-prev {
-    position: relative;
-  }
-  .carousel-control-next {
-    bottom: auto;
-    postion: absolute;
-    top: auto;
+  h2 {
+    text-align: center;
   }
 }
 

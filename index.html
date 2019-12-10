@@ -59,7 +59,7 @@
           <h2 class="wine-message" id="wine-message"></h2>
         </div>
       <div class="cellar">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#wineModal">Create New Wine</button>
+      <button type="button" class="main btn btn-primary" data-toggle="modal" data-target="#wineModal">New Wine</button>
       <div id="wineModal"class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -101,7 +101,7 @@
 
       <div>
         <!-- <input required type="number" min"0" name="wine[id]"/> -->
-        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#wineUpdateModal">Update Wine</button>
+        <button type="submit" class="main btn btn-primary" data-toggle="modal" data-target="#wineUpdateModal">Update Wine</button>
         <div id="wineUpdateModal"class="modal" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -147,7 +147,7 @@
       </div>
       <div>
         <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#wineDeleteModal">Delete Wine</button>
+<button type="button" class="main btn btn-secondary" data-toggle="modal" data-target="#wineDeleteModal">Delete Wine</button>
 
 <!-- Modal -->
 <div class="modal fade" id="wineDeleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
@@ -173,19 +173,15 @@
     </div>
   </div>
 </div>
-
-      </div>
-
-      <div>
-        <h2 id="wine-message"></h2>
-      </div>
-
-        <button class="btn btn-info" id="wine-index">See All Wines</button>
-        <!-- Or a drop down list of wines to pick from, doesn't have to be button -->
-        <form id="wine-id">
-          <input required type="number" min"0" name="wine[id]"/>
-          <button class="btn btn-info" type="submit">Get Wine!</button>
-        </form>
+</div>
+  <div>
+    <button class="main btn btn-info" id="wine-index">See All Wines</button>
+    <!-- Or a drop down list of wines to pick from, doesn't have to be button -->
+    <form class="wine-id" id="wine-id">
+      <input required type="number" min"0" name="wine[id]"/>
+      <button class="main btn btn-info" type="submit">Get Wine!</button>
+    </form>
+  </div>
 </div>
 
       <div class="wine-cellar"></div>

@@ -1,26 +1,26 @@
-<div class="container">
+<!-- <div class="container">
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <!-- <ol class="carousel-indicators">
+  <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1++"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol> -->
+  </ol>
   <div class="carousel-inner">
-    <!-- <div class="carousel-item active">
+    <div class="carousel-item active">
       <img src="..." class="d-block w-100" alt="...">
-    </div> -->
+    </div>
 
       <ul id="wines">
       {{#each wines as |wine|}}
       {{#if @first}}
-      <!-- <ol class="carousel-indicators">
+      <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    </ol> -->
+    </ol>
           <div class="carousel-item active">
             {{else}}
-            <!-- <ol class="carousel-indicators">
+            <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          </ol> -->
+          </ol>
             <div class="carousel-item">
               {{/if}}
         <li>
@@ -49,9 +49,9 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-</div>
-
-   <!-- <h2>Wines: </h2>
+</div> -->
+<div class="container">
+   <h2>All Wines</h2>
    <ul id="wines">
    {{#each wines as |wine|}}
      <li>
@@ -67,4 +67,5 @@
        <ul>Memories: {{wine.mem}}</ul>
      </li>
    {{/each}}
-   </ul> -->
+   </ul>
+ </div>

@@ -35,6 +35,7 @@ const displayWine = function (responseData) {
 
 const onNewWineSuccess = function (data) {
   $('#message').hide()
+  $('wine-cellar').show()
   successMessage('New entry created successfully!')
   store.wine = data.wine
   // console.log(store.wine)
@@ -57,6 +58,7 @@ const onIndexWineSuccess = function (data) {
   $('#message').hide()
   successMessage('Here are all your bottles!')
   const winesPageHtml = winesPageTemplate({ wines: data.wines })
+  $('wine-cellar').show()
   $('.wine-cellar').text('')
   $('.wine-cellar').append(winesPageHtml)
 }
