@@ -27,8 +27,8 @@ const displayWine = function (responseData) {
     <ul>Country: ${responseData.wine.country}</ul>
     <ul>Appearance: ${responseData.wine.appearance}</ul>
     <ul>Aroma: ${responseData.wine.aroma}</ul>
-    <ul>Tasting Notes: ${responseData.wine.notes}</ul>
-    <ul>Memories: ${responseData.wine.mem}</ul>
+    <ul>Tasting Notes: ${responseData.wine.tasting_notes}</ul>
+    <ul>Memories: ${responseData.wine.memories}</ul>
     </div>
   `)
   $('.wine-cellar').append(wineText)
