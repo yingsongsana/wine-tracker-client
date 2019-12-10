@@ -57,6 +57,7 @@ const onIndexWineSuccess = function (data) {
   // console.log(store.wine)
   // console.log(store.wine[0].name)
   $('#message').hide()
+  $('#wine-message').show()
   successMessage('Here are all your bottles!')
   const winesPageHtml = winesPageTemplate({ wines: data.wines })
   $('.wine-cellar').show()
