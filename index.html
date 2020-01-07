@@ -99,9 +99,8 @@
         </div>
       </div>
 
-      <div>
-        <!-- <input required type="number" min"0" name="wine[id]"/> -->
-        <button type="submit" class="main btn btn-info" data-toggle="modal" data-target="#wineUpdateModal">Update Wine</button>
+
+        <!-- modal for undating wine -->
         <div id="wineUpdateModal"class="modal" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -144,10 +143,6 @@
         </div>
         <!-- <input required type="number" min"0" name="wine[id]"/>
         <button type="button" form"wine-entry" class="btn btn-primary" data-toggle="modal" data-target="#wineUpdateModal">Update Wine Entry</button> -->
-      </div>
-      <div>
-        <!-- Button trigger modal -->
-<button type="button" class="main btn btn-secondary" data-toggle="modal" data-target="#wineDeleteModal">Delete Wine</button>
 
 <!-- Modal -->
 <div class="modal fade" id="wineDeleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
@@ -164,7 +159,7 @@
       </div>
       <div class="modal-footer">
         <form id="wine-delete">
-          <label class="col-form-label">ID:</label>
+          <label class="col-form-label">Please enter the bottle ID # to confirm</label>
           <input class="form-control" type="number" min"0" name="wine[id]"/>
         </form>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Nvm</button>
@@ -173,7 +168,7 @@
     </div>
   </div>
 </div>
-</div>
+
   <div>
     <button class="main btn btn-info" id="wine-index">See All Wines</button>
     <!-- Or a drop down list of wines to pick from, doesn't have to be button -->

@@ -29,6 +29,8 @@ const displayWine = function (responseData) {
     <ul>Aroma: ${responseData.wine.aroma}</ul>
     <ul>Tasting Notes: ${responseData.wine.tasting_notes}</ul>
     <ul>Memories: ${responseData.wine.memories}</ul>
+    <button type="submit" class="main btn btn-info" data-toggle="modal" data-target="#wineUpdateModal">Update Wine</button>
+    <button type="button" class="main btn btn-secondary" data-toggle="modal" data-target="#wineDeleteModal">Delete Wine</button>
     </div>
   `)
   $('.wine-cellar').append(wineText)
