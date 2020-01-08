@@ -32,20 +32,28 @@ body {
   }
 }
 
-.container {
-  background-color: $wine-color;
-  border: 3px solid black;
-  color: #ffffff;
-  font-weight: bolder;
-  height: 70vh;
-  opacity: .8;
-  overflow-x: hidden;
-  overflow-y: auto;
-  overflow: auto;
+// .container {
+//   background-color: $wine-color;
+//   border: 3px solid black;
+//   color: #ffffff;
+//   font-weight: bolder;
+//   height: 70vh;
+//   opacity: .8;
+//   overflow-x: hidden;
+//   overflow-y: auto;
+//   overflow: auto;
+//   width: 50vw;
+//   h2 {
+//     text-align: center;
+//   }
+// }
+.card {
   width: 50vw;
-  h2 {
-    text-align: center;
-  }
+}
+
+.dropdown-menu {
+  padding: 1rem;
+  width: 50vw;
 }
 
 .containerSingle {
