@@ -32,28 +32,36 @@ body {
   }
 }
 
-// .container {
-//   background-color: $wine-color;
-//   border: 3px solid black;
-//   color: #ffffff;
-//   font-weight: bolder;
-//   height: 70vh;
-//   opacity: .8;
-//   overflow-x: hidden;
-//   overflow-y: auto;
-//   overflow: auto;
-//   width: 50vw;
-//   h2 {
-//     text-align: center;
-//   }
-// }
+.container {
+  float: right;
+  margin-right: -20vw;
+  margin-top: 10vh;
+}
+
 .card {
+  background-color: $wine-color;
+  color: #ffffff;
   width: 50vw;
+  margin-bottom: 1rem;
+
+  h3 {
+    text-align: center;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  button {
+    margin: .5rem;
+    align-items: center;
+  }
 }
 
 .dropdown-menu {
   padding: 1rem;
   width: 50vw;
+  z-index: 5;
 }
 
 .containerSingle {
@@ -63,7 +71,6 @@ body {
   font-weight: bolder;
   height: 70vh;
   margin-left: 35%;
-  opacity: .8;
   overflow-x: hidden;
   overflow-y: auto;
   overflow: auto;
@@ -71,6 +78,10 @@ body {
   h3 {
     text-align: center;
   }
+}
+
+.modal-backdrop {
+  display: none;
 }
 
 
@@ -171,6 +182,22 @@ body {
     float: none;
     margin: 5%;
     width: 90%;
+
+    .card {
+      font-size: .5rem;
+      margin-bottom: inherit;
+      width: 80vw;
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      button {
+        font-size: 80%;
+        line-height: 2;
+        padding: 2px 4px;
+      }
+    }
   }
 
   .containerSingle {

@@ -1,9 +1,8 @@
-<!-- <div class="container"> -->
-   <h2>All Wines</h2>
+<div class="container">
    {{#each wines as |wine|}}
-   <ul id="wines" data-id="{{wine.id}}">
    <div class="card">
      <div class="card-body">
+   <ul id="wines" data-id="{{wine.id}}">
        <h3>{{wine.name}}</h3>
        <ul>ID: {{wine.id}}</ul>
        <ul>Style: {{wine.style}}</ul>
@@ -16,7 +15,7 @@
        <ul>Memories: {{wine.memories}}</ul>
 
        <div class="dropdown">
-         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   Update
 </button>
          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -46,9 +45,9 @@
            </form>
          </div>
       </div>
-      <button type="button" class="main btn btn-secondary" data-toggle="modal" data-target="#wineDeleteModal">Delete Wine</button>
+      <button type="button" class="main btn btn-danger btn-sm" data-toggle="modal" data-target="#wineDeleteModal">Delete Wine</button>
     </div>
 </div>
     </ul>
    {{/each}}
- <!-- </div> -->
+ </div>
