@@ -1,5 +1,9 @@
 # Wine Journal Application
 
+![Imgur](https://i.imgur.com/GtzHWK4.jpg "Screenshot of the sign-in page")
+
+![Imgur](https://i.imgur.com/vXYCbvj.png "Screenshot of a wine entry")
+
 This is part of a full-stack project utilizing Rails to create API as well as the
 front-end here utilizing Javascript, HTML, CSS, jQuery, Bootstrap, and Handlebars.
 Within this application, user is able to sign-up and create an account. Once signed-in,
