@@ -1,29 +1,33 @@
 @import '~bootstrap/scss/bootstrap';
-$success: #4BB543;
-$failure: #cc0000;
-$theme-color: #E0E0E0;
-$primary-color: #F3F3F3;
+$success: #4bb543;
+$failure: #c00;
+$theme-color: #e0e0e0;
+$primary-color: #f3f3f3;
 $wine-color: #6b1e2d;
+$font-color: #fff;
 
 body {
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
   background: url('./public/images/grapes_maja_petric.jpg') no-repeat center center fixed;
   background-size: cover;
   color: $wine-color;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
 }
 
 .cellar {
+  float: left;
   margin-left: 1rem;
   margin-top: 2rem;
-  float: left;
+
   .main {
     margin: .5rem;
     min-width: -webkit-fill-available;
   }
+
   .wine-id {
     display: grid;
+
     input {
       border-radius: 5px;
       margin: auto;
@@ -40,9 +44,9 @@ body {
 
 .card {
   background-color: $wine-color;
-  color: #ffffff;
-  width: 50vw;
+  color: $font-color;
   margin-bottom: 1rem;
+  width: 50vw;
 
   h3 {
     text-align: center;
@@ -53,8 +57,8 @@ body {
   }
 
   button {
-    margin: .5rem;
     align-items: center;
+    margin: .5rem;
   }
 }
 
@@ -64,55 +68,9 @@ body {
   z-index: 5;
 }
 
-.containerSingle {
-  background-color: $wine-color;
-  border: 3px solid black;
-  color: #ffffff;
-  font-weight: bolder;
-  height: 70vh;
-  margin-left: 35%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  overflow: auto;
-  width: 50vw;
-  h3 {
-    text-align: center;
-  }
-}
-
 .modal-backdrop {
   display: none;
 }
-
-
-
-// Would love to get below to work for background image opacity
-// without turning all elements opaque
-// .my-container {
-//     position: relative;
-//     // overflow: hidden;
-//   }
-//
-// /* You could use :after - it doesn't really matter */
-// .my-container::after {
-//     content: ' ';
-//     display: block;
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     height: 100%;
-//     z-index: 1;
-//     opacity: 0.6;
-//     background-image: url('/images/grapes_maja_petric.jpg');
-//     background-repeat: no-repeat;
-//     background-position: 50% 0;
-//     // -ms-background-size: cover;
-//     // -o-background-size: cover;
-//     // -moz-background-size: cover;
-//     // -webkit-background-size: cover;
-//     background-size: cover;
-// }
 
 .greeting {
   display: flex;
@@ -129,8 +87,8 @@ body {
 .sign-up {
   border: 3px solid $theme-color;
   border-radius: 3px;
-  display: inline-block;
   color: $wine-color;
+  display: inline-block;
   height: 230px;
   margin: 20px 0;
   padding: 30px;
@@ -199,14 +157,6 @@ body {
       }
     }
   }
-
-  .containerSingle {
-    display: block;
-    float: none;
-    width: 90%;
-    margin: auto;
-    margin-bottom: 5%;
-  }
 }
 
 @media (max-width: 320px) {
@@ -216,10 +166,4 @@ body {
     // padding: 50px;
     padding-left: .5rem;
   }
-
-  // .containerSingle {
-  //   display: block;
-  //   float: none;
-  //   width: 90%;
-  // }
 }
