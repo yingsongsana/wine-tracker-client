@@ -1,7 +1,8 @@
 <div class="container">
-   <h2>All Wines</h2>
-   <ul id="wines">
    {{#each wines as |wine|}}
+   <div class="card">
+     <div class="card-body">
+   <ul id="wines" data-id="{{wine.id}}">
        <h3>{{wine.name}}</h3>
        <ul>ID: {{wine.id}}</ul>
        <ul>Style: {{wine.style}}</ul>
@@ -12,6 +13,41 @@
        <ul>Aroma: {{wine.aroma}}</ul>
        <ul>Tasting Notes: {{wine.tasting_notes}}</ul>
        <ul>Memories: {{wine.memories}}</ul>
+
+       <div class="dropdown">
+         <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Update
+</button>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <form class="wine-update">
+             <input type="hidden" name="wine[id]" value="{{wine.id}}"/>
+             <label class="col-form-label">ID:</label>
+             <input class="form-control" type="number" min="0" name="wine[id]" value="{{wine.id}}"/>
+             <label class="col-form-label">Name:</label>
+             <input class="form-control" type="text" name="wine[name]" value="{{wine.name}}"/>
+             <label for="wine-country" class="col-form-label">Style:</label>
+             <input class="form-control" type="text" name="wine[style]" value="{{wine.style}}"/>
+             <label class="col-form-label">Variety:</label>
+             <input class="form-control" type="text" name="wine[variety]" value="{{wine.variety}}"/>
+             <label class="col-form-label">Producer:</label>
+             <input class="form-control" type="text" name="wine[producer]" value="{{wine.producer}}"/>
+             <label class="col-form-label">Country:</label>
+             <input class="form-control" type="text" name="wine[country]" value="{{wine.country}}"/>
+             <label class="col-form-label">Appearance:</label>
+             <textarea class="form-control" rows="3" name="wine[appearance]" value="{{wine.appearance}}"></textarea>
+             <label class="col-form-label">Aroma:</label>
+             <textarea class="form-control" rows="3" name="wine[aroma]" value="{{wine.aroma}}"></textarea>
+             <label class="col-form-label">Tasting Notes:</label>
+             <textarea class="form-control" name="wine[tasting_notes]" value="{{wine.tasting_notes}}"></textarea>
+             <label class="col-form-label">Memories:</label>
+             <textarea class="form-control" name="wine[memories]" value="{{wine.memories}}"></textarea>
+             <button class="btn btn-primary">Save Changes</button>
+           </form>
+         </div>
+      </div>
+      <button type="button" class="main btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#wineDeleteModal">Delete Wine</button>
+    </div>
+</div>
+    </ul>
    {{/each}}
-   </ul>
  </div>

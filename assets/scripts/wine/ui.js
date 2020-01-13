@@ -17,7 +17,9 @@ const failureMessage = function (newText) {
 const displayWine = function (responseData) {
   $('.wine-cellar').text('')
   const wineText = (`
-    <div class="containerSingle">
+    <div class="container">
+    <div class="card">
+    <div class="card-body">
     <h3>${responseData.wine.name}</h3>
     <ul>ID: ${responseData.wine.id}</ul>
     <ul>Producer: ${responseData.wine.producer}</ul>
@@ -29,6 +31,8 @@ const displayWine = function (responseData) {
     <ul>Aroma: ${responseData.wine.aroma}</ul>
     <ul>Tasting Notes: ${responseData.wine.tasting_notes}</ul>
     <ul>Memories: ${responseData.wine.memories}</ul>
+    </div>
+    </div>
     </div>
   `)
   $('.wine-cellar').append(wineText)
@@ -89,15 +93,13 @@ const onGetWineFailure = function () {
 const onUpdateWineSuccess = function (responseData) {
   $('#message').hide()
   successMessage('Updated successfully!')
-  $('#wine-update').trigger('reset')
-  $('#wineUpdateModal').modal('toggle')
+  $('.wine-update .dropdown-menu').removeClass('show')
   displayWine(responseData)
 }
 
 const onUpdateWineFailure = function () {
   $('#message').hide()
   failureMessage('Update failed')
-  $('#wineUpdateModal').modal('toggle')
 }
 
 const onDeleteWineSuccess = function (responseData) {
