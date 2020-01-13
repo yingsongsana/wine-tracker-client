@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Wine Journal</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div class="auth">
+      <div class="greeting">
+        <h1>Wine Journal</h1>
+        <!-- <h2 id="message"></h2> -->
+        <div class="sign-up">
+        <h2>Sign Up</h2>
+        <form id="sign-up">
+        <input class="form-control form-control-sm" type="email" name="credentials[email]" placeholder="Enter email"/>
+        <input class="form-control form-control-sm" type="password" name="credentials[password]" placeholder="Enter password"/>
+        <input class="form-control form-control-sm" type="password" name="credentials[password_confirmation]" placeholder="Enter password"/>
+        <button class="btn btn-info btn-sm">Sign Up</button>
+        </form>
+        </div>
+
+        <div class="sign-in">
+        <h2>Sign In</h2>
+        <form id="sign-in">
+        <input class="form-control form-control-sm" type="email" name="credentials[email]" placeholder="Enter email"/>
+        <input class="form-control form-control-sm" type="password" name="credentials[password]" placeholder="Enter password"/>
+        <button class="btn btn-info btn-sm">Sign In</button>
+        </form>
+        </div>
+      </div>
+
+
+      <div class="auth-items">
+        <nav class="navbar navbar-light bg-light">
+
+        <!-- <h4>Change Password</h4> -->
+        <form class="form-inline" id="change-password">
+        <input class="form-control form-control-sm" type="password" name="passwords[old]" placeholder="Enter old password"/>
+        <input class="form-control form-control-sm" type="password" name="passwords[new]" placeholder="Enter new password"/>
+        <button class="btn btn-info btn-sm">Change Password</button>
+        </form>
+
+        <button class="btn btn-info btn-sm" id="sign-out">Sign Out</button>
+      </nav>
+      </div>
+    </div>
+    <h2 id="message"></h2>
+
+
+
+        <div>
+          <h2 class="wine-message" id="wine-message"></h2>
+        </div>
+      <div class="cellar">
+      <button type="button" class="main btn btn-info" data-toggle="modal" data-target="#wineModal">New Wine</button>
+      <div id="wineModal"class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Wine Entry</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="wine-entry">
+                <label class="col-form-label">Name:</label>
+                <input class="form-control" type="text" name="wine[name]"/>
+                <label for="wine-country" class="col-form-label">Style:</label>
+                <input class="form-control" type="text" name="wine[style]"/>
+                <label class="col-form-label">Variety:</label>
+                <input class="form-control" type="text" name="wine[variety]"/>
+                <label class="col-form-label">Producer:</label>
+                <input class="form-control" type="text" name="wine[producer]"/>
+                <label class="col-form-label">Country:</label>
+                <input class="form-control" type="text" name="wine[country]"/>
+                <label class="col-form-label">Appearance:</label>
+                <textarea class="form-control" rows="3" name="wine[appearance]"></textarea>
+                <label class="col-form-label">Aroma:</label>
+                <textarea class="form-control" rows="3" name="wine[aroma]"></textarea>
+                <label class="col-form-label">Tasting Notes:</label>
+                <textarea class="form-control" name="wine[tasting_notes]"></textarea>
+                <label class="col-form-label">Memories:</label>
+                <textarea class="form-control" name="wine[memories]"></textarea>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" form="wine-entry" class="btn btn-primary">Save New Wine</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Discard</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+        <!-- <input required type="number" min"0" name="wine[id]"/>
+        <button type="button" form"wine-entry" class="btn btn-primary" data-toggle="modal" data-target="#wineUpdateModal">Update Wine Entry</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="wineDeleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete Wine</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>If it's corked? It's corked.</p>
+      </div>
+      <div class="modal-footer">
+        <form id="wine-delete">
+          <label class="col-form-label">Please enter the bottle ID # to confirm</label>
+          <input class="form-control" type="number" min"0" name="wine[id]"/>
+        </form>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Nvm</button>
+        <button type="submit" form="wine-delete" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div>
+    <button class="main btn btn-info" id="wine-index">See All Wines</button>
+    <!-- Or a drop down list of wines to pick from, doesn't have to be button -->
+    <form class="wine-id" id="wine-id">
+      <input required type="number" min"0" name="wine[id]"/>
+      <button class="main btn btn-info" type="submit">Get Wine!</button>
+    </form>
+  </div>
+</div>
+<div class="wine-cellar">
+</div>
+    </body>
+</html>
